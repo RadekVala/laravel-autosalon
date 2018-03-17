@@ -7,6 +7,30 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+## By: Radek Vala 
+### Jak to nainstalovat
+#### Systémové požadavky
+- PHP, MySQL, Apache - např. nainstalovaný a spuštěný WAMP
+- Existující prázdná databáze - např. vytvořte v phpMyAdmin databázi autosalon s porovnáváním utf8mb4-czech-ci.
+
+#### Instalace
+- stažený ZIP s projektem rozbalte někam do rootu webserveru (v případě WAMP: C:\wamp64\www)
+- otevřte si příkazový řádek z adresáře projektu
+- spusťe příkaz: composer install (stáhne balíčky frameworku)
+- vytvořte soubor .env pro nastavení připojení k DB apod.
+  - zkopírujte .env.example a přejmenujte na .env
+  - nastavte především DB_DATABASE, DB_USERNAME, DB_PASSWORD
+- nechte vygenerovat šifrovací klíč aplikace:
+  php artisan key:generate
+- spusťte php artisan migrate (vytvoří tabulky do DB)
+
+- otevřete v pohlížeči
+  http://localhost:cisloportu/nazev_projektu/public/cars
+   - vypis z databaze vozidel (na zacatku prazdny)
+
+   http://localhost:cisloportu/nazev_projektu/public/cars/create
+   - formular pro vlozeni do DB
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
